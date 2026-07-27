@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechNova — Web Development Studio</title>
+<meta name="description" content="TechNova is a web development studio that designs and ships fast, responsive websites and Node.js-powered backends — from first commit to production.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%230B1220%22/><text x=%2212%22 y=%2216.5%22 font-size=%2211%22 text-anchor=%22middle%22 fill=%22%234F8CFF%22 font-family=%22monospace%22>&lt;/&gt;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><span class="logo-mark">&lt;/&gt;</span>TechNova</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="contact.html" class="btn btn-primary nav-cta">Get a Quote</a>
+            <button id="darkBtn" aria-label="Toggle dark mode">🌙</button>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <span class="eyebrow">Web Development Studio</span>
+        <h1 id="mainHeading">Build Modern <span class="highlight">Websites</span></h1>
+        <p>We design and ship fast, responsive products using HTML, CSS,
+            JavaScript and Node.js — from first commit to production.</p>
+        <div class="hero-actions">
+            <a href="#services" class="btn btn-primary" id="heroBtn">Explore Services</a>
+            <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="code-window">
+            <div class="code-window-bar">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="code-window-title">technova.js</span>
+            </div>
+            <pre class="code-body"><code id="typedCode"></code><span class="cursor">&#8203;</span></pre>
+        </div>
+        <div class="floating-badge badge-1">⚡ Fast builds</div>
+        <div class="floating-badge badge-2">🛡️ Secure by default</div>
+    </div>
+</section>
+
+<div class="stack-strip">
+    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+</div>
+
+<section id="services" class="services">
+    <div class="section-head">
+        <span class="eyebrow center">What we do</span>
+        <h2>Our Services</h2>
+        <p>A small, senior team covering everything a modern website needs — design, build, hosting and growth.</p>
+    </div>
+
+    <div class="service-grid reveal">
+        <div class="card">
+            <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24"><path d="M9 8 4 12l5 4"/><path d="M15 8l5 4-5 4"/></svg></div>
+            <h3>Web Development</h3>
+            <p>Responsive, accessible websites built with clean, maintainable code and the latest tooling.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24"><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+            <h3>UI / UX Design</h3>
+            <p>Interfaces designed around how people actually use them, tested across every screen size.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0"/><rect x="3" y="12" width="4" height="6" rx="1"/><rect x="17" y="12" width="4" height="6" rx="1"/><path d="M21 18v1a2 2 0 0 1-2 2h-2"/></svg></div>
+            <h3>Customer Support</h3>
+            <p>A direct line to the people who built your site — real answers, not a ticket queue.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+            <h3>SEO Optimization</h3>
+            <p>Technical SEO foundations — fast load times, clean markup and structured data — built in from day one.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.4-1.5A5 5 0 0 0 6 19h11.5Z"/></svg></div>
+            <h3>Cloud Hosting</h3>
+            <p>Secure, scalable hosting with backups and monitoring, so your site stays up when it matters.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24"><path d="M3 11v3a1 1 0 0 0 1 1h2l4 4V6l-4 4H4a1 1 0 0 0-1 1Z"/><path d="M14 9a3 3 0 0 1 0 6"/></svg></div>
+            <h3>Digital Marketing</h3>
+            <p>Campaigns and analytics that turn visitors into customers, with clear reporting throughout.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner tight reveal">
+    <h2>Have a project in mind?</h2>
+    <p>Tell us what you're building — we'll reply with next steps within one business day.</p>
+    <a href="contact.html" class="btn btn-light">Start a Conversation</a>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <div class="logo"><span class="logo-mark">&lt;/&gt;</span>TechNova</div>
+            <p>A small web development studio building fast, modern, no-nonsense websites and the backends that power them.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get in touch</h4>
+            <ul>
+                <li><a href="mailto:hello@technova.dev">hello@technova.dev</a></li>
+                <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+                <li>Mon – Fri, 9am – 6pm</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 TechNova. All rights reserved.</p>
+        <p>Built with HTML, CSS, JavaScript &amp; Node.js</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
