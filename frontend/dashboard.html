@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — TechNova</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%230B1220%22/><text x=%2212%22 y=%2216.5%22 font-size=%2211%22 text-anchor=%22middle%22 fill=%22%234F8CFF%22 font-family=%22monospace%22>&lt;/&gt;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo"><span class="logo-mark">&lt;/&gt;</span>TechNova</a>
+        <div class="nav-right">
+            <span id="userGreeting" style="font-size:14px; color:var(--text-muted); white-space:nowrap;"></span>
+            <button id="logoutBtn" class="btn btn-ghost nav-cta">Log Out</button>
+            <button id="darkBtn" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </nav>
+</header>
+
+<div class="dash-wrap">
+    <div class="dash-header">
+        <div>
+            <h1>Dashboard</h1>
+            <p>Manage your messages — add, edit, or remove any entry.</p>
+        </div>
+        <button class="btn btn-primary" id="newMessageBtn">+ New Message</button>
+    </div>
+
+    <div class="dash-stats">
+        <div class="dash-stat"><div class="num" id="statTotal">0</div><div class="label">Total messages</div></div>
+        <div class="dash-stat"><div class="num" id="statNew">0</div><div class="label">New</div></div>
+        <div class="dash-stat"><div class="num" id="statRead">0</div><div class="label">Read</div></div>
+        <div class="dash-stat"><div class="num" id="statReplied">0</div><div class="label">Replied</div></div>
+    </div>
+
+    <div id="alertBox" class="alert"></div>
+
+    <div class="dash-table-wrap">
+        <div id="loadingRow" class="dash-loading">Loading messages...</div>
+        <table class="dash-table" id="dashTable" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Status</th>
+                    <th>Received</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <div id="emptyRow" class="dash-empty" style="display:none;">Nothing here yet — click "New Message" to add your first entry.</div>
+    </div>
+</div>
+
+<!-- Create / Edit modal -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+        <div class="modal-header">
+            <h3 id="modalTitle">New Message</h3>
+            <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div id="modalAlert" class="alert"></div>
+            <form id="messageForm">
+                <input type="hidden" id="messageId">
+                <div>
+                    <label for="mName">Name</label>
+                    <input type="text" id="mName" placeholder="Full name" required>
+                </div>
+                <div>
+                    <label for="mEmail">Email</label>
+                    <input type="email" id="mEmail" placeholder="name@example.com" required>
+                </div>
+                <div>
+                    <label for="mMessage">Message</label>
+                    <textarea id="mMessage" placeholder="Message content..." required></textarea>
+                </div>
+                <div>
+                    <label for="mStatus">Status</label>
+                    <select id="mStatus" class="status-select" style="width:100%;">
+                        <option value="new">New</option>
+                        <option value="read">Read</option>
+                        <option value="replied">Replied</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-ghost" id="modalCancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="modalSubmitBtn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-bottom" style="border-top:none; justify-content:center;">
+        <p>© 2026 TechNova. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

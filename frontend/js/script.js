@@ -5,6 +5,20 @@
    so pages that don't include a given section stay unaffected.
 ============================================================ */
 
+/* ---------- Scroll progress bar ---------- */
+
+(function () {
+    const bar = document.getElementById("scrollProgress");
+    if (!bar) return;
+
+    window.addEventListener("scroll", function () {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = pct + "%";
+    });
+})();
+
 /* ---------- Dark / light mode (persisted) ---------- */
 
 (function () {

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — TechNova</title>
+<meta name="description" content="Log in to send TechNova a message.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%230B1220%22/><text x=%2212%22 y=%2216.5%22 font-size=%2211%22 text-anchor=%22middle%22 fill=%22%234F8CFF%22 font-family=%22monospace%22>&lt;/&gt;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><span class="logo-mark">&lt;/&gt;</span>TechNova</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="darkBtn" aria-label="Toggle dark mode">🌙</button>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<div class="auth-wrap">
+    <div class="auth-card hero-animate">
+        <div class="code-window-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="code-window-title">login.js</span>
+        </div>
+        <div class="auth-body">
+            <h1>Log In</h1>
+            <p>Sign in to send us a message from the Contact page.</p>
+
+            <div id="alertBox" class="alert"></div>
+
+            <form id="loginForm">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="loginBtn" style="justify-content:center; width:100%;">Log In</button>
+            </form>
+
+            <p class="auth-switch">Don't have an account? <a href="register.html" id="registerLink">Create one</a></p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-bottom" style="border-top:none; justify-content:center;">
+        <p>© 2026 TechNova. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
